@@ -118,7 +118,7 @@ function Pomodoro() {
   }
 
   return (
-    <div className="pomodoro">
+    <div className="pomodoro m-5">
       <div
         className="row d-flex justify-content-center"
       >
@@ -143,7 +143,7 @@ function Pomodoro() {
       </div>
 
       {/* timer component */}
-      <div>
+      <div className="mt-5 pt-5">
         <Timer
           timeRemainingState={timeRemainingState}
           inSession={inSession}
@@ -155,7 +155,7 @@ function Pomodoro() {
       </div>
 
       {/* play and pause component */}
-      <div className="d-flex justify-content-center">
+      <div className="d-flex justify-content-center mb-5 pb-5">
         <PlayPause
           playPause={playPause}
           stopSession={stopSession}

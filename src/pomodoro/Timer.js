@@ -32,36 +32,32 @@ function Timer(props) {
   const progressBarStyle = { width: progressPercentage + "%" };
 
   return (
-    <div style={sessionDisplay} className="mb-5">
+    <div style={sessionDisplay} className="mr-5 pr-5 mb-5">
       {/* TODO: This area should show only when a focus 
             or break session is running or pauses */}
-      <div className="row mb-2">
-        <div className="col">
+             <div className="row d-flex justify-content-center pl-5">
+      <p style={{color: "white", fontSize: "150px", marginBottom: "200px"}} className="font-weight-bold">Study</p>
+      </div>
+      <div className="row py-5 my-5 pr-5 mr-5">
+     
+        <div className="col mb-5">
           {/* TODO: Update message below to include current session 
                     (Focusing or On Break) and total duration */}
-          <h1
-            className="mb-4 pb-4 font-weight-normal"
-            style={{ fontSize: "200px", color: "white" }}
-            data-testid="session-title"
+         
+          <span
+            className="rounded-circle border-0 font-weight-bold mb-5 mr-5"
+            data-testid="duration-focus"
+            style={{
+              backgroundColor: "red",
+              color: "white",
+              padding: "300px 200px",
+              marginRight: "100px",
+              fontSize: "200px",
+            }}
           >
             {sessionTitle}
-          </h1>
+          </span>
           {pauseLabel}
-        </div>
-      </div>
-      <div className="row mb-2">
-        <div className="col col-12 d-flex justify-content-center">
-          <div className="progress" style={{ height: "50px", width: "200%" }}>
-            {/* <div
-                        className="progress-bar"
-                        role="progressbar"
-                        aria-valuemin="0"
-                        aria-valuemax="100"
-                        aria-valuenow={progressPercentage} 
-                        style={progressBarStyle} 
-                    />
-                     */}
-          </div>
         </div>
       </div>
     </div>
@@ -69,5 +65,3 @@ function Timer(props) {
 }
 
 export default Timer;
-
-//  style={{ outline: "25px solid red", backgroundColor: "#081949", color: "white", padding: "200px 175px", fontSize: "100px"  }}
