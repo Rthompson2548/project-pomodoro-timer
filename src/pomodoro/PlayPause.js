@@ -14,7 +14,7 @@ function PlayPause(props) {
             {/* play/pause button */}
             <button
               type="button"
-              className="rounded-circle btn btn-success pr-1 mr-5"
+              className="rounded-circle btn btn-success pr-2 mr-5"
               style={{ fontSize: "130px", width: "200px", height: "200px" }}
               data-testid="play-pause"
               title="Start or pause timer"

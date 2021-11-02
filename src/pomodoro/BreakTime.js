@@ -9,7 +9,7 @@ function BreakTime(props) {
           <span
           className="rounded-circle border-0 font-weight-bold mb-5"
           data-testid="duration-focus"
-          style={{ backgroundColor: "red", color: "white", padding: "100px 125px", margin: "0px 100px"  }}
+          style={{ backgroundColor: "green", color: "white", padding: "100px 125px", margin: "0px 100px"  }}
           >
             {/* TODO: Update this text to display the current 
                 break session duration */}

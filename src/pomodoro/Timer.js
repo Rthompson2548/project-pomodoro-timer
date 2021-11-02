@@ -48,7 +48,7 @@ function Timer(props) {
             className="rounded-circle border-0 font-weight-bold mb-5 mr-5"
             data-testid="duration-focus"
             style={{
-              backgroundColor: "red",
+              backgroundColor: "blue",
               color: "white",
               padding: "300px 200px",
               marginRight: "100px",
