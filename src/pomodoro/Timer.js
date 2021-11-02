@@ -23,13 +23,13 @@ function Timer(props) {
 
   // set the progress bar to progress through break time if on break
   // set it to progress through focus time if not
-  const progressPercentage = props.onBreak
-    ? (1 - props.timeRemainingState / (props.BreakTime * 60)) * 100
-    : (1 - props.timeRemainingState / (props.FocusTime * 60)) * 100;
+  // const progressPercentage = props.onBreak
+  //   ? (1 - props.timeRemainingState / (props.BreakTime * 60)) * 100
+  //   : (1 - props.timeRemainingState / (props.FocusTime * 60)) * 100;
 
   // make the width of the progress bar to fill the portion of time completed
   // out of full time
-  const progressBarStyle = { width: progressPercentage + "%" };
+  // const progressBarStyle = { width: progressPercentage + "%" };
 
   return (
     <div style={sessionDisplay} className="mr-5 pr-5 mb-5">

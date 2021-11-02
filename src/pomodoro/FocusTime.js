@@ -9,9 +9,7 @@ function FocusTime(props) {
          
           <span
           className="rounded-circle border-0 font-weight-bold mb-5"
-            // className="input-group-text border-0 p-4 font-weight-bold"
             data-testid="duration-focus"
-            // style={{ fontSize: "100px", backgroundColor: "#081949", color: "white" }}
             style={{ backgroundColor: "red", color: "white", padding: "100px 125px", margin: "0px 100px" }}
           >
             {/* Focus: */}
@@ -28,7 +26,7 @@ function FocusTime(props) {
               className="btn m-4 px-4 py-3"
               style={{ fontSize: "80px", color: "white" }}
               data-testid="decrease-focus-time"
-              onClick={props.subtractFiveMinutes}
+              onClick={props.downByFive}
             >
               <span className="oi oi-minus" />
             </button>
@@ -42,7 +40,7 @@ function FocusTime(props) {
               style={{ fontSize: "80px", color: "white" }}
               className="btn m-4 px-2 py-3"
               data-testid="increase-focus-time"
-              onClick={props.addFiveMinutes}
+              onClick={props.upByFive}
             >
               <span className="oi oi-plus" />
             </button>
