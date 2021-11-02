@@ -3,28 +3,28 @@ import { minutesToDuration } from "../utils/duration";
 
 function BreakTime(props) {
   return (
-    <div className="col-4 col">
-      <div className="float-right ml-4">
+    <div className="col">
+      <div className="float-right">
         <div className="input-group input-group-lg mb-2">
           <span
-            className="input-group-text"
-            data-testid="duration-focus"
-            style={{ fontSize: "60px" }}
+          className="rounded-circle border-0 font-weight-bold mb-5"
+          data-testid="duration-focus"
+          style={{ backgroundColor: "red", color: "white", padding: "200px 175px", margin: "0px 100px", fontSize: "100px"  }}
           >
             {/* TODO: Update this text to display the current 
                 break session duration */}
             {/* break button label */}
-            Break Duration: {minutesToDuration(props.BreakTime)}
+            <p>{minutesToDuration(props.BreakTime)}</p>
           </span>
-          <div className="input-group-append input-group-lg" >
+          <div className="input-group-append input-group-lg" style={{ marginLeft: "125px" }}>
             {/* TODO: Implement decreasing break duration and disable 
                 during a focus or break session*/}
 
             {/* button for decreasing break time by 1 min */}
             <button
               type="button"
-              style={{ fontSize: "60px" }}
-              className="btn btn-secondary m-4 px-4 py-3"
+              style={{ fontSize: "100px", color: "white" }}
+              className="btn m-4 px-4 py-3"
               data-testid="decrease-break-time"
               onClick={props.downByOne}
             >
@@ -37,8 +37,8 @@ function BreakTime(props) {
             {/* button for increasing break time by 1 min */}
             <button
               type="button"
-              style={{ fontSize: "60px" }}
-              className="btn btn-secondary m-4 px-4 py-3"
+              style={{ fontSize: "100px", color: "white" }}
+              className="btn m-4 px-4 py-3"
               data-testid="increase-break-time"
               onClick={props.upByOne}
             >

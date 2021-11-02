@@ -3,19 +3,21 @@ import { minutesToDuration } from "../utils/duration";
 
 function FocusTime(props) {
   return (
-    <div className="col col-4 mr-4">
-      <div className="float-right mr-4">
-        <div className="input-group input-group-lg mb-2">
+    <div className="col">
+      <div>
+        <div className="input-group input-group-lg">
+         
           <span
-            className="input-group-text"
+          className="rounded-circle border-0 font-weight-bold mb-5"
+            // className="input-group-text border-0 p-4 font-weight-bold"
             data-testid="duration-focus"
-            style={{ fontSize: "60px" }}
+            // style={{ fontSize: "100px", backgroundColor: "#081949", color: "white" }}
+            style={{ backgroundColor: "red", color: "white", padding: "200px 175px", fontSize: "100px", margin: "0px 100px" }}
           >
-            {/* TODO: Update this text to display the current focus session duration 
-              (in minutes) */}
-            Focus Duration: {minutesToDuration(props.FocusTime)}
+            {/* Focus: */}
+             <p>{minutesToDuration(props.FocusTime)}</p>
           </span>
-          <div className="input-group-append input-group-lg mr-4 ml-4">
+          <div className="input-group-append input-group-lg" style={{ marginLeft: "125px" }}>
             {/* TODO: Implement decreasing focus duration and disable during 
               a focus or break session */}
 
