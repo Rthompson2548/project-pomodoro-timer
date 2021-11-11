@@ -118,33 +118,26 @@ function Pomodoro() {
   }
 
   return (
-    <div className="pomodoro m-5">
-      <div
-        className="row d-flex justify-content-center"
-      >
-        {/* focus component */}
-        <div className="text-center row">
-          <div className="d-flex justify-content-center col col-12">
-            <FocusTime
-              FocusTime={FocusTimeState}
-              inSession={inSession}
-              upByFive={increaseFiveMinutes}
-              downByFive={decreaseFiveMinutes}
-            />
-         
+    <div className="pomodoro">
+      {/* focus component */}
+      <div className="row pt-4 d-flex justify-content-center">
+          <FocusTime
+            FocusTime={FocusTimeState}
+            inSession={inSession}
+            upByFive={increaseFiveMinutes}
+            downByFive={decreaseFiveMinutes}
+          />
 
           <BreakTime
             BreakTime={BreakTimeState}
             upByOne={increaseOneMinute}
             downByOne={decreaseOneMinute}
           />
-          </div>
-        </div>
       </div>
-
       {/* timer component */}
-      <div className="mt-5 pt-5">
+      <div>
         <Timer
+        className="d-flex justify-content-center"
           timeRemainingState={timeRemainingState}
           inSession={inSession}
           onBreak={onBreak}
@@ -155,7 +148,7 @@ function Pomodoro() {
       </div>
 
       {/* play and pause component */}
-      <div className="d-flex justify-content-center mb-5 pb-5">
+      <div className="d-flex justify-content-center">
         <PlayPause
           playPause={playPause}
           stopSession={stopSession}

@@ -3,19 +3,26 @@ import classNames from "../utils/class-names";
 
 function PlayPause(props) {
   return (
-    <div className="row mb-5">
+    <div className="row mb-5" style={{ marginBottom: "10px" }}>
       <div className="col">
         <div
-          className="btn-group btn-group-lg mb-2"
+          className="btn-group btn-group-lg"
           role="group"
           aria-label="Timer controls"
         >
-          <div className="mt-5 pt-5">
+          <div className="mt-5 mb-5 pt-5">
             {/* play/pause button */}
+            <h5 class="text-white pt-4 pb-3"> Click play to start studying!</h5>
+
             <button
               type="button"
-              className="rounded-circle btn btn-success pr-2 mr-5"
-              style={{ fontSize: "130px", width: "200px", height: "200px" }}
+              className="rounded-circle mr-2 btn pr-1 text-white"
+              style={{
+                fontSize: "60px",
+                width: "100px",
+                height: "100px",
+                backgroundColor: "#189E83",
+              }}
               data-testid="play-pause"
               title="Start or pause timer"
               onClick={props.playPause}
@@ -24,7 +31,7 @@ function PlayPause(props) {
                 className={classNames({
                   oi: true,
                   "oi-media-play": !props.isTimerRunning,
-                  "oi-media-pause": props.isTimerRunning,
+                  "oi-media-pause pr-2": props.isTimerRunning,
                 })}
               />
             </button>
@@ -35,12 +42,17 @@ function PlayPause(props) {
             session and disable when there is no active session */}
             <button
               type="button"
-              className="btn rounded-circle btn-danger mr-5"
-              style={{ fontSize: "125px", width: "200px", height: "200px" }}
+              className="btn rounded-circle ml-2"
+              style={{
+                fontSize: "60px",
+                width: "100px",
+                height: "100px",
+                backgroundColor: "#F4755A",
+              }}
               title="Stop the session"
               onClick={props.stopSession}
             >
-              <span className="oi oi-media-stop" />
+              <span style={{ color: "white" }} className="oi oi-media-stop" />
             </button>
           </div>
         </div>

@@ -5,27 +5,26 @@ function BreakTime(props) {
   return (
     <div className="col">
       <div className="float-right">
-        <div className="input-group input-group-lg mb-2">
+        <div className="input-group input-group-lg">
           <span
-          className="rounded-circle border-0 font-weight-bold mb-5"
+          className="rounded-circle border-0 font-weight-bold mb-1 px-5"
           data-testid="duration-focus"
-          style={{ backgroundColor: "green", color: "white", padding: "100px 125px", margin: "0px 100px"  }}
+          style={{ backgroundColor: "#F4755A", color: "white" }}
           >
             {/* TODO: Update this text to display the current 
                 break session duration */}
             {/* break button label */}
-            <p style={{ fontSize: "50px" }}>Break</p>
-            <p style={{ fontSize: "100px" }}>{minutesToDuration(props.BreakTime)}</p>
-          </span>
-          <div className="input-group-append input-group-lg" style={{ marginLeft: "125px" }}>
+            <p class="mt-3" style={{ fontSize: "32px" }}>Break</p>
+            <p style={{ fontSize: "70px" }}>{minutesToDuration(props.BreakTime)}</p>
+            <div className="input-group-append input-group-lg d-flex justify-content-center pb-2">
             {/* TODO: Implement decreasing break duration and disable 
                 during a focus or break session*/}
 
             {/* button for decreasing break time by 1 min */}
             <button
               type="button"
-              style={{ fontSize: "80px", color: "white" }}
-              className="btn m-4 px-4 py-3"
+              style={{ fontSize: "32px" }}
+              className="btn text-white"
               data-testid="decrease-break-time"
               onClick={props.downByOne}
             >
@@ -38,14 +37,16 @@ function BreakTime(props) {
             {/* button for increasing break time by 1 min */}
             <button
               type="button"
-              style={{ fontSize: "80px", color: "white" }}
-              className="btn m-4 px-2 py-3"
+              style={{ fontSize: "32px" }}
+              className="btn text-white"
               data-testid="increase-break-time"
               onClick={props.upByOne}
             >
               <span className="oi oi-plus" />
             </button>
           </div>
+            
+          </span>
         </div>
       </div>
     </div>

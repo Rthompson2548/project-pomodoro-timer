@@ -8,23 +8,22 @@ function FocusTime(props) {
         <div className="input-group input-group-lg">
          
           <span
-          className="rounded-circle border-0 font-weight-bold mb-5"
+          className="rounded-circle border-0 font-weight-bold mb-1 px-5"
             data-testid="duration-focus"
-            style={{ backgroundColor: "red", color: "white", padding: "100px 125px", margin: "0px 100px" }}
+            style={{ backgroundColor: "#189E83", color: "white" }}
           >
             {/* Focus: */}
-            <p style={{ fontSize: "50px" }}>Focus</p>
-             <p style={{ fontSize: "100px" }}>{minutesToDuration(props.FocusTime)}</p>
-          </span>
-          <div className="input-group-append input-group-lg" style={{ marginLeft: "125px" }}>
+            <p class="mt-3" style={{ fontSize: "32px" }}>Focus</p>
+             <p style={{ fontSize: "70px" }}>{minutesToDuration(props.FocusTime)}</p>
+             <div className="input-group-append input-group-lg d-flex justify-content-center pb-2">
             {/* TODO: Implement decreasing focus duration and disable during 
               a focus or break session */}
 
             {/* button that decreases focus time by 5 mins */}
             <button
               type="button"
-              className="btn m-4 px-4 py-3"
-              style={{ fontSize: "80px", color: "white" }}
+              className="btn text-white"
+              style={{ fontSize: "32px" }}
               data-testid="decrease-focus-time"
               onClick={props.downByFive}
             >
@@ -37,14 +36,16 @@ function FocusTime(props) {
             {/* button that increases focus time by 5 mins */}
             <button
               type="button"
-              style={{ fontSize: "80px", color: "white" }}
-              className="btn m-4 px-2 py-3"
+              style={{ fontSize: "32px" }}
+              className="btn text-white"
               data-testid="increase-focus-time"
               onClick={props.upByFive}
             >
               <span className="oi oi-plus" />
             </button>
           </div>
+          </span>
+         
         </div>
       </div>
     </div>

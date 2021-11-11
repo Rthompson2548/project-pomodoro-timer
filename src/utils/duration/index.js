@@ -36,5 +36,7 @@ export function secondsToDuration(givenSeconds) {
   const seconds = Math.round(givenSeconds % 60)
     .toString()
     .padStart(2, "0")
-  return `${minutes}:${seconds}`
+  return (
+    `${minutes}:${seconds}`
+  ) 
 }
