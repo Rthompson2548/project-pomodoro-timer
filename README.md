@@ -11,3 +11,11 @@ The pomodoro timer allows for users to increase/decrease their focus and break t
 
 ## Technologies & tools
 React was used to make this project, in order for the timer to be modified depending on the use states of each component.
+
+## Run locally
+- [ ] Fork & Clone repository
+- [ ] Run `npm install`
+- [ ] Run `npm start` 
+
+## Images
+![official-final-pomodoro-timer](https://user-images.githubusercontent.com/80596387/141702231-41924531-9e6e-4ad0-bfd6-4f6436581953.png)
