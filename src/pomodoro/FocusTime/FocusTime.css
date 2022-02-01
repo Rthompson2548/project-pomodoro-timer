@@ -1,0 +1,52 @@
+.focus-time-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.focus-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.focus-time-timer {
+  font-size: 42px;
+  margin-bottom: 24px;
+}
+
+.focus-time-button {
+  width: 36px;
+  height: 36px;
+  margin: 0 10px 0 10px;
+  border: none;
+  box-shadow: 1px 1px #d6d6d6;
+  border-radius: 5%;
+}
+
+.focus-time-minus-button {
+  background-color: red;
+}
+
+.focus-time-plus-button {
+  background-color: green;
+}
+
+.modify-focus-time-symbol {
+  font-size: 12px;
+  color: #fff;
+}
+
+@media (min-width: 800px) {
+  .focus-time-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .focus-title {
+    font-size: 24px;
+  }
+
+  .focus-time-timer {
+    font-size: 56px;
+  }
+}

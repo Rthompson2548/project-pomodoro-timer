@@ -1,3 +1,18 @@
-.App {
-  text-align: center;
+.pomodoro-header {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.pomodoro-title {
+  font-weight: bold;
+  font-size: 36px;
+  margin-top: 10px;
+}
+
+@media (min-width: 800px) {
+  .pomodoro-title {
+    font-size: 42px;
+    padding: 10px 0;
+  }
 }

@@ -1,0 +1,52 @@
+.break-time-column {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.break-time-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.break-time-timer {
+  font-size: 42px;
+  margin-bottom: 24px;
+}
+
+.break-time-button {
+  width: 36px;
+  height: 36px;
+  margin: 0 10px 0 10px;
+  border: none;
+  box-shadow: 1px 1px #d6d6d6;
+  border-radius: 5%;
+}
+
+.break-time-minus-button {
+  background-color: red;
+}
+
+.break-time-plus-button {
+  background-color: green;
+}
+
+.modify-break-time-symbol {
+  font-size: 12px;
+  color: #fff;
+}
+
+@media (min-width: 800px) {
+  .break-time-button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .break-time-title {
+    font-size: 24px;
+  }
+
+  .break-time-timer {
+    font-size: 56px;
+  }
+}

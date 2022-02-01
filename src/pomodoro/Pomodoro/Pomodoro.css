@@ -1,0 +1,11 @@
+.focus-break {
+  display: flex;
+  margin: 5% 10%;
+  justify-content: space-around;
+}
+
+@media (min-width: 800px) {
+  .focus-break {
+    margin: 24px 25% 5% 25%;
+  }
+}

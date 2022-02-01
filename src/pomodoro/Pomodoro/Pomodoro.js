@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import useInterval from "../utils/useInterval";
-import BreakTime from "./BreakTime";
-import FocusTime from "./FocusTime";
-import PlayPause from "./PlayPause";
-import Timer from "./Timer";
+import useInterval from "../../utils/useInterval";
+import BreakTime from "../BreakTime/BreakTime";
+import FocusTime from "../FocusTime/FocusTime";
+import PlayPause from "../PlayPause/PlayPause";
+import Timer from "../Timer/Timer";
+import "./Pomodoro.css";
 
 function Pomodoro() {
   // default pomodoro timer states
@@ -120,24 +121,26 @@ function Pomodoro() {
   return (
     <div className="pomodoro">
       {/* focus component */}
-      <div className="row pt-4 d-flex justify-content-center">
-          <FocusTime
-            FocusTime={FocusTimeState}
-            inSession={inSession}
-            upByFive={increaseFiveMinutes}
-            downByFive={decreaseFiveMinutes}
-          />
 
-          <BreakTime
-            BreakTime={BreakTimeState}
-            upByOne={increaseOneMinute}
-            downByOne={decreaseOneMinute}
-          />
+      <div className="focus-break">
+        <FocusTime
+         
+          FocusTime={FocusTimeState}
+          inSession={inSession}
+          upByFive={increaseFiveMinutes}
+          downByFive={decreaseFiveMinutes}
+        />
+
+        <BreakTime
+          BreakTime={BreakTimeState}
+          upByOne={increaseOneMinute}
+          downByOne={decreaseOneMinute}
+        />
       </div>
+
       {/* timer component */}
       <div>
         <Timer
-        className="d-flex justify-content-center"
           timeRemainingState={timeRemainingState}
           inSession={inSession}
           onBreak={onBreak}
@@ -148,7 +151,9 @@ function Pomodoro() {
       </div>
 
       {/* play and pause component */}
-      <div className="d-flex justify-content-center">
+      <div
+      // className="d-flex justify-content-center"
+      >
         <PlayPause
           playPause={playPause}
           stopSession={stopSession}
