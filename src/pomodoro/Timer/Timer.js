@@ -3,10 +3,6 @@ import { minutesToDuration, secondsToDuration } from "../../utils/duration";
 import "./Timer.css";
 
 function Timer(props) {
-  /** if the timer is in session, set the display to show the running timer
-  if not, do not show it */
-  const sessionDisplay = { display: "block" };
-
   /**  if the timer is on break, display a statement that shows remaning break time
   if not, display statement that shows remaining focus time */
   const sessionTitle = props.onBreak
