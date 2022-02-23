@@ -17,9 +17,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "prebuild": "CI=true react-scripts test --colors",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "CI=true react-scripts test",
+    "prebuild": "CI=true react-scripts test --colors",
+    "build-win": "set CI=false&&rescripts build",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "vercel --prod"
